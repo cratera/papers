@@ -1,0 +1,8 @@
+{
+  // Add intellisense to twrnc classes used in the style prop
+  "tailwindCSS.classAttributes": ["style"],
+  "tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)",
+    ["tw.style\\(([^)]*)\\)", "'([^']*)'"]
+  ]
+}

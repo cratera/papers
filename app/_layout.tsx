@@ -1,7 +1,9 @@
+import tw from "@/tailwind";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
 import { StatusBar } from "react-native";
+import { useDeviceContext } from "twrnc";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -43,6 +45,9 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
+  // Ensure that the device context is available to tailwind.
+  useDeviceContext(tw);
+
   return (
     <Stack>
       <Stack.Screen name="modal" options={{ presentation: "modal" }} />

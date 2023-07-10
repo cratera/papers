@@ -1,23 +1,15 @@
+import tw from "@/tailwind";
 import { Link } from "expo-router";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={tw`test`}>
       <Text>Open up app/index.tsx to start working on your app!</Text>
 
-      <Link href="/modal">
+      <Link href="/modal" style={tw`mt-4 text-blue-500`}>
         <Text>Open modal</Text>
       </Link>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
