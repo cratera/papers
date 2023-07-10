@@ -1,0 +1,26 @@
+{
+  "name": "papers",
+  "version": "0.0.0",
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios"
+  },
+  "dependencies": {
+    "expo": "49.0.0",
+    "react": "18.2.0",
+    "react-native": "0.72.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.14",
+    "typescript": "5.1.6"
+  },
+  "engines": {
+    "node": "18.16.1",
+    "npm": "This project is configured to use pnpm"
+  },
+  "packageManager": "pnpm@8.6.7"
+}
