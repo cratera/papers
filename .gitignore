@@ -27,6 +27,7 @@ yarn-error.log*
 .expo/
 dist/
 web-build/
+expo-env.d.ts 
 
 # native
 *.jks

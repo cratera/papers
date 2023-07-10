@@ -2,7 +2,7 @@
   "name": "papers",
   "version": "0.0.0",
   "private": true,
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "expo-router/entry",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "start": "expo start",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "expo": "49.0.0",
+    "expo-router": "2.0.0",
     "react": "18.2.0",
     "react-native": "0.72.1"
   },
