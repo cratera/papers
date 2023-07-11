@@ -8,7 +8,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "format": "prettier --write . --ignore-path .gitignore --ignore-path .prettierignore"
+    "format": "prettier --write . --ignore-path .gitignore",
+    "lint": "eslint . --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "expo": "49.0.2",
@@ -19,7 +20,9 @@
   },
   "devDependencies": {
     "@types/react": "18.2.14",
-    "prettier": "3.0.0",
+    "eslint": "8.44.0",
+    "eslint-config-universe": "11.3.0",
+    "prettier": "2.8.8",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.6"
   },

@@ -1,9 +1,10 @@
-import tw from '@/tailwind'
 import { useFonts } from 'expo-font'
 import { SplashScreen, Stack } from 'expo-router'
 import { useEffect } from 'react'
 import { StatusBar } from 'react-native'
 import { useDeviceContext } from 'twrnc'
+
+import tw from '@/tailwind'
 
 export {
   // Catch any errors thrown by the Layout component.

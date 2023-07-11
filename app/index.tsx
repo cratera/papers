@@ -1,6 +1,7 @@
-import tw from '@/tailwind'
 import { Link } from 'expo-router'
 import { Text, View } from 'react-native'
+
+import tw from '@/tailwind'
 
 export default function App() {
   return (

@@ -1,5 +1,6 @@
-import tw from '@/tailwind'
 import { Text, View } from 'react-native'
+
+import tw from '@/tailwind'
 
 export default function ModalScreen() {
   return (
