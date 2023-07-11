@@ -9,7 +9,7 @@ module.exports = {
   plugins: [
     plugin(function ({ addUtilities }) {
       addUtilities({
-        test: {
+        '.test': {
           flex: '1 1 0%',
           alignItems: 'center',
           justifyContent: 'center',
