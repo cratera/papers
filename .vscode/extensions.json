@@ -1,6 +1,8 @@
 {
   "recommendations": [
     // Tailwind CSS IntelliSense
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    // Prettier - Code formatter
+    "esbenp.prettier-vscode"
   ]
 }

@@ -1,6 +1,6 @@
-import tw from "@/tailwind";
-import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import tw from '@/tailwind'
+import { Link } from 'expo-router'
+import { Text, View } from 'react-native'
 
 export default function App() {
   return (
@@ -11,5 +11,5 @@ export default function App() {
         <Text>Open modal</Text>
       </Link>
     </View>
-  );
+  )
 }

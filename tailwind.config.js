@@ -1,4 +1,4 @@
-const plugin = require("tailwindcss/plugin");
+const plugin = require('tailwindcss/plugin')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -10,12 +10,12 @@ module.exports = {
     plugin(function ({ addUtilities }) {
       addUtilities({
         test: {
-          flex: "1 1 0%",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "white",
+          flex: '1 1 0%',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: 'white',
         },
-      });
+      })
     }),
   ],
-};
+}

@@ -1,11 +1,11 @@
-import tw from "@/tailwind";
-import { Link, Stack } from "expo-router";
-import { Text, View } from "react-native";
+import tw from '@/tailwind'
+import { Link, Stack } from 'expo-router'
+import { Text, View } from 'react-native'
 
 export default function NotFoundScreen() {
   return (
     <>
-      <Stack.Screen options={{ title: "Oops!" }} />
+      <Stack.Screen options={{ title: 'Oops!' }} />
       <View style={tw`test`}>
         <Text style={tw`font-bold text-xl`}>This screen doesn't exist.</Text>
 
@@ -14,5 +14,5 @@ export default function NotFoundScreen() {
         </Link>
       </View>
     </>
-  );
+  )
 }

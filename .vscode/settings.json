@@ -1,4 +1,8 @@
 {
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2, // Same as .prettierrc tabWidth value
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   // Add intellisense to twrnc classes used in the style prop
   "tailwindCSS.classAttributes": ["style"],
   "tailwindCSS.experimental.classRegex": [

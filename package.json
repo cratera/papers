@@ -7,7 +7,8 @@
     "preinstall": "npx only-allow pnpm",
     "start": "expo start",
     "android": "expo start --android",
-    "ios": "expo start --ios"
+    "ios": "expo start --ios",
+    "format": "prettier --write . --ignore-path .gitignore --ignore-path .prettierignore"
   },
   "dependencies": {
     "expo": "49.0.0",
@@ -18,8 +19,9 @@
   },
   "devDependencies": {
     "@types/react": "18.2.14",
-    "typescript": "5.1.6",
-    "tailwindcss": "3.3.2"
+    "prettier": "3.0.0",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.1.6"
   },
   "engines": {
     "node": "18.16.1",
