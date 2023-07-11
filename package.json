@@ -11,7 +11,7 @@
     "format": "prettier --write . --ignore-path .gitignore --ignore-path .prettierignore"
   },
   "dependencies": {
-    "expo": "49.0.0",
+    "expo": "49.0.2",
     "expo-router": "2.0.0",
     "react": "18.2.0",
     "react-native": "0.72.1",
