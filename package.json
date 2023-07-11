@@ -10,6 +10,7 @@
     "ios": "expo start --ios",
     "format": "prettier --write . --ignore-path .gitignore",
     "lint": "eslint . --fix --ignore-path .gitignore",
+    "check:types": "tsc --noEmit",
     "check:writing": "alex ."
   },
   "dependencies": {
