@@ -5,7 +5,8 @@
   "editor.formatOnSave": true,
 
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true // Run eslint --fix on save
+    "source.fixAll.eslint": true, // Run eslint --fix on save
+    "source.organizeImports": true // Remove unused imports on save
   },
   // Add intellisense to twrnc classes used in the style prop
   "tailwindCSS.classAttributes": ["style"],
