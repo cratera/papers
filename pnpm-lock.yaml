@@ -76,6 +76,9 @@ devDependencies:
   eslint-config-universe:
     specifier: 11.3.0
     version: 11.3.0(eslint@8.44.0)(prettier@2.8.8)(typescript@5.1.6)
+  eslint-plugin-log-filenames:
+    specifier: 1.0.6
+    version: 1.0.6(eslint@8.44.0)
   eslint-plugin-storybook:
     specifier: 0.6.12
     version: 0.6.12(eslint@8.44.0)(typescript@5.1.6)
@@ -8960,6 +8963,14 @@ packages:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
       - supports-color
+    dev: true
+
+  /eslint-plugin-log-filenames@1.0.6(eslint@8.44.0):
+    resolution: {integrity: sha512-6a2NMpYn+dWJBL7ZSAbhjdnExCOn1ECMAgXjIsiozuCjZwQ1jq1+geGAvorjPzWLHwM6yAGR2mMpTCFxlVN0TQ==}
+    peerDependencies:
+      eslint: '>=3'
+    dependencies:
+      eslint: 8.44.0
     dev: true
 
   /eslint-plugin-node@11.1.0(eslint@8.44.0):

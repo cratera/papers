@@ -1,1 +1,9 @@
+# dependencies
 pnpm-lock.yaml
+
+# expo
+.expo
+expo-env.d.ts
+
+# storybook
+.storybook/storybook.requires.js

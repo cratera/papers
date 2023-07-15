@@ -1,3 +1,7 @@
 {
-  "extends": ["universe/native", "plugin:storybook/recommended"]
+  "extends": ["universe/native", "plugin:storybook/recommended"],
+  "plugins": [
+    // Prints the files being linted
+    "log-filenames"
+  ]
 }
