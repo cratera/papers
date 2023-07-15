@@ -1,7 +1,13 @@
-import { Pressable, PressableProps } from 'react-native'
+import { Pressable, PressableProps, Text } from 'react-native'
 
-export type ButtonProps = PressableProps
+export interface ButtonProps extends Omit<PressableProps, 'children'> {
+  label: string
+}
 
-export default function Button(props: ButtonProps) {
-  return <Pressable {...props} />
+export default function Button({ label, ...props }: ButtonProps) {
+  return (
+    <Pressable {...props}>
+      <Text>{label}</Text>
+    </Pressable>
+  )
 }

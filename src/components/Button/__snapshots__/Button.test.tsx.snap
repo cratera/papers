@@ -32,6 +32,8 @@ exports[`Button renders correctly with given props 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
 >
-  Google
+  <Text>
+    Button
+  </Text>
 </View>
 `;

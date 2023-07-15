@@ -9,7 +9,7 @@ const setup = (props: ButtonProps) => {
 describe('Button', () => {
   it('renders correctly with given props', async () => {
     const tree = setup({
-      children: 'Google',
+      label: 'Button',
     }).toJSON()
 
     expect(tree).toMatchSnapshot()
