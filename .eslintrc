@@ -3,5 +3,8 @@
   "plugins": [
     // Prints the files being linted
     "log-filenames"
-  ]
+  ],
+  "rules": {
+    "no-console": 2
+  }
 }
