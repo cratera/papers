@@ -2,7 +2,10 @@
   "extends": ["universe/native", "plugin:storybook/recommended"],
   "plugins": [
     // Prints the files being linted
-    "log-filenames"
+    "log-filenames",
+    // We have to do upgrade eslint-plugin-prettier to v5 ourselves so that prettier v3 is supported
+    // We can remove this (and the eslint-plugin-prettier depenedency) once eslint-config-universe upgrades to eslint-plugin-prettier v5.
+    "prettier"
   ],
   "rules": {
     "no-console": 2
