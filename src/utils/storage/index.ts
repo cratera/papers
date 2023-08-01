@@ -1,0 +1,1 @@
+export { ExpoSecureStoreAdapter } from './ExpoSecureStoreAdapter'

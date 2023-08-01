@@ -4,12 +4,11 @@ import { useEffect } from 'react'
 import { StatusBar } from 'react-native'
 import { useDeviceContext } from 'twrnc'
 
+import { SupabaseProvider } from '@/src/services/supabase/components/SupabaseProvider'
 import tw from '@/tailwind'
 
-export {
-  // Catch any errors thrown by the Layout component.
-  ErrorBoundary,
-} from 'expo-router'
+// Fallback error page. See: https://docs.expo.dev/routing/error-handling/#error-handling
+export { ErrorBoundary } from 'expo-router'
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
@@ -32,6 +31,7 @@ export default function RootLayout() {
     if (error) throw error
   }, [error])
 
+  // Hide the splash screen once fonts have loaded.
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync()
@@ -42,7 +42,11 @@ export default function RootLayout() {
     return null
   }
 
-  return <RootLayoutNav />
+  return (
+    <SupabaseProvider>
+      <RootLayoutNav />
+    </SupabaseProvider>
+  )
 }
 
 function RootLayoutNav() {

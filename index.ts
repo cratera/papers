@@ -1,6 +1,6 @@
 import Constants from 'expo-constants'
 
-import devLog from './src/utils/devLog'
+import { devLog } from './src/utils/devLog'
 
 let AppEntryPoint
 

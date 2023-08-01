@@ -10,3 +10,16 @@ pnpm i
 # Run the project
 pnpm start
 ```
+
+## Generating Supabase types
+
+Start by [installing the Supabase CLi](https://supabase.com/docs/guides/cli) and then run the following commands:
+
+```bash
+# Login to Supabase. You only need to run this command once.
+# You're going to need an access token that you can generate in the Supabase dashboard.
+# See: https://supabase.com/dashboard/account/tokens
+supabase login
+
+pnpm generate-types
+```
