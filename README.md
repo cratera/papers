@@ -1,7 +1,7 @@
 # papers
 
 ```bash
-# Enables you to use the correct pnpm version for this project without having to explicitly install it. You only need to run this command once. See: https://nodejs.org/api/corepack.html#corepack
+# Enables usage of the correct pnpm version for this project without having to explicitly install it. You only need to run this command once. See: https://nodejs.org/api/corepack.html#corepack
 corepack enable
 
 # Install dependencies
@@ -22,4 +22,12 @@ Start by [installing the Supabase CLi](https://supabase.com/docs/guides/cli) and
 supabase login
 
 pnpm generate-types
+```
+
+## Pulling project's environment variables
+
+We use [dotenv](https://www.dotenv.org/) to manage our environment variables. To pull their latest version, run the following command:
+
+```bash
+pnpm pull:env
 ```
