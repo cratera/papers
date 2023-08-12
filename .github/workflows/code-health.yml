@@ -1,4 +1,4 @@
-name: 'Code health'
+name: Code health
 
 on:
   push:

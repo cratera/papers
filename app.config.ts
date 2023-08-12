@@ -30,8 +30,4 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     tsconfigPaths: true,
     typedRoutes: true,
   },
-  extra: {
-    // This env var is used in the storybook script to determine whether to run storybook or Papers
-    storybookEnabled: process.env.STORYBOOK_ENABLED,
-  },
 })
