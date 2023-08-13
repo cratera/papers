@@ -1,0 +1,113 @@
+name: Code health
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  install-cache-deps:
+    name: Install and cache dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          run_install: false
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-pnpm-cache-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-cache-
+
+      - name: Install dependencies
+        run: pnpm i
+
+  check-types:
+    name: Check types
+    runs-on: ubuntu-latest
+    needs: install-cache-deps
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          run_install: false
+
+      - name: Restore dependencies cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-pnpm-cache-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: Run pnpm check:types
+        run: pnpm check:types
+
+  lint:
+    name: Run eslint
+    runs-on: ubuntu-latest
+    needs: install-cache-deps
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          run_install: false
+
+      - name: Restore dependencies cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-pnpm-cache-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: Run pnpm lint
+        run: pnpm lint
+
+  test:
+    name: Run jest
+    runs-on: ubuntu-latest
+    needs: install-cache-deps
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          run_install: false
+
+      - name: Restore dependencies cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-pnpm-cache-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: Run pnpm test
+        run: pnpm test

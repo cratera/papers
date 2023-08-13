@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "universe/native",
+    "plugin:storybook/recommended",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
+  ],
+  "plugins": [
+    // Prints the files being linted
+    "log-filenames",
+    // Enforces best practices
+    "@tanstack/query",
+    // We have to do upgrade eslint-plugin-prettier to v5 ourselves so that prettier v3 is supported
+    // We can remove this (and the eslint-plugin-prettier depenedency) once eslint-config-universe upgrades to eslint-plugin-prettier v5.
+    "prettier"
+  ],
+  "rules": {
+    "no-console": 2
+  }
+}
