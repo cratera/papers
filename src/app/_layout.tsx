@@ -35,7 +35,9 @@ enableAutoQueryRefetchOnReconnect()
 
 export default function RootLayout() {
   const [fontsLoaded, fontsError] = useFonts({
-    SpaceMono: require('../../assets/fonts/SpaceMono-Regular.ttf'),
+    'Karla-Regular': require('../../assets/fonts/Karla-Regular.ttf'),
+    'Karla-Bold': require('../../assets/fonts/Karla-Bold.ttf'),
+    'YoungSerif-Regular': require('../../assets/fonts/YoungSerif-Regular.ttf'),
   })
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.

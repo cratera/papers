@@ -4,6 +4,11 @@ const plugin = require('tailwindcss/plugin')
 module.exports = {
   content: [`**/*.{js,ts,jsx,tsx}`],
   theme: {
+    fontFamily: {
+      sans: ['Karla-Regular'],
+      'sans-bold': ['Karla-Bold'],
+      serif: ['YoungSerif-Regular'],
+    },
     extend: {},
   },
   plugins: [
