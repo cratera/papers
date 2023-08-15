@@ -9,6 +9,7 @@ import { AuthProvider, useAuth } from '../features/auth/components/AuthProvider'
 import { useRefecthOnAppFocus } from '../hooks/react-query'
 import { enableAutoQueryRefetchOnReconnect } from '../utils/react-query'
 
+import { fontList } from '@/assets/fonts'
 import { SupabaseProvider } from '@/src/services/supabase/components/SupabaseProvider'
 import tw from '@/tailwind'
 
@@ -34,11 +35,7 @@ const queryClient = new QueryClient()
 enableAutoQueryRefetchOnReconnect()
 
 export default function RootLayout() {
-  const [fontsLoaded, fontsError] = useFonts({
-    'Karla-Regular': require('../../assets/fonts/Karla-Regular.ttf'),
-    'Karla-Bold': require('../../assets/fonts/Karla-Bold.ttf'),
-    'YoungSerif-Regular': require('../../assets/fonts/YoungSerif-Regular.ttf'),
-  })
+  const [fontsLoaded, fontsError] = useFonts(fontList)
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
