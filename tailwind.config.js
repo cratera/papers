@@ -43,6 +43,15 @@ module.exports = {
       'sans-bold': ['Karla-Bold'],
       serif: ['YoungSerif-Regular'],
     },
+    fontSize: {
+      h1: ['2.75rem', { lineHeight: '2.75rem' }],
+      h2: ['1.75rem', { lineHeight: '1.75rem' }],
+      h3: ['1.5rem', { lineHeight: '1.5rem' }],
+      h4: ['1rem', { lineHeight: '1rem' }],
+      display: ['1.5rem', { lineHeight: '2.5rem' }],
+      body: ['1rem', { lineHeight: '1.5rem' }],
+      small: ['0.75rem', { lineHeight: '1rem' }],
+    },
     extend: {},
   },
   plugins: [

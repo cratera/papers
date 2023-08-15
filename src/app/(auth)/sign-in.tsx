@@ -21,7 +21,7 @@ const SignIn = () => {
 
   return (
     <View style={tw`test`}>
-      <Text style={tw`text-xs`}>Email</Text>
+      <Text style={tw`text-small`}>Email</Text>
       <TextInput
         onChangeText={setEmail}
         placeholder="Email"
@@ -29,7 +29,7 @@ const SignIn = () => {
         editable={!isLoading}
       />
 
-      <Text style={tw`mt-3 text-xs`}>Password</Text>
+      <Text style={tw`mt-3 text-small`}>Password</Text>
       <TextInput
         onChangeText={setPassword}
         placeholder="Password"
@@ -43,7 +43,7 @@ const SignIn = () => {
 
       {isLoading && <ActivityIndicator />}
 
-      {error && <Text style={tw`text-red-500`}>{error.message}</Text>}
+      {error && <Text style={tw`text-orange`}>{error.message}</Text>}
     </View>
   )
 }
