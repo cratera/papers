@@ -13,12 +13,12 @@ export default function App() {
     <View style={tw`test`}>
       <Text>{`Hi ${session?.user?.email}!`}</Text>
 
-      <Link href="/modal" style={tw`mt-4 text-blue-500`}>
+      <Link href="/modal" style={tw`mt-4 text-purple`}>
         <Text>Open modal</Text>
       </Link>
 
       <Pressable
-        style={tw`mt-4 bg-blue-500 rounded p-2`}
+        style={tw`mt-4 bg-purple rounded p-2`}
         onPress={() => mutate()}
       >
         <Text style={tw`text-white`}>Sign out</Text>

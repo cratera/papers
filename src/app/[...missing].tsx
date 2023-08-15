@@ -11,7 +11,7 @@ export default function NotFoundScreen() {
         <Text style={tw`font-bold text-xl`}>This screen doesn't exist.</Text>
 
         <Link href="/" style={tw`mt-4 px-4`}>
-          <Text style={tw`text-sm text-blue-500`}>Go to home screen!</Text>
+          <Text style={tw`text-sm text-purple`}>Go to home screen!</Text>
         </Link>
       </View>
     </>
