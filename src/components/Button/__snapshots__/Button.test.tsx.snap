@@ -32,7 +32,18 @@ exports[`Button renders correctly with given props 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
 >
-  <Text>
+  <Text
+    style={
+      [
+        {
+          "fontFamily": "Karla-Regular",
+          "fontSize": 16,
+          "lineHeight": 24,
+        },
+        undefined,
+      ]
+    }
+  >
     Button
   </Text>
 </View>

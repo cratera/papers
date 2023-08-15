@@ -1,12 +1,7 @@
 import { useState } from 'react'
-import {
-  ActivityIndicator,
-  Pressable,
-  Text,
-  TextInput,
-  View,
-} from 'react-native'
+import { ActivityIndicator, Pressable, TextInput, View } from 'react-native'
 
+import { Text } from '@/src/components'
 import { useSignUpWithEmail } from '@/src/features/auth/hooks'
 import tw from '@/tailwind'
 
