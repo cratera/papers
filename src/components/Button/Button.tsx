@@ -1,6 +1,6 @@
 import { Pressable, PressableProps } from 'react-native'
 
-import { Text } from '@/src/components'
+import { Text } from '../Text'
 
 export interface ButtonProps extends Omit<PressableProps, 'children'> {
   label: string
