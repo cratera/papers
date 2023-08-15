@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text renders correctly with given props 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontFamily": "Karla-Bold",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "textAlign": "center",
+      },
+    ]
+  }
+>
+  Welcome to Papers!
+</Text>
+`;

@@ -8,10 +8,10 @@ const setup = (props: ButtonProps) => {
 
 describe('Button', () => {
   it('renders correctly with given props', async () => {
-    const tree = setup({
+    const component = setup({
       label: 'Button',
     }).toJSON()
 
-    expect(tree).toMatchSnapshot()
+    expect(component).toMatchSnapshot()
   })
 })

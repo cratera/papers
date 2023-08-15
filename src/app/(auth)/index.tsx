@@ -1,6 +1,7 @@
 import { useRouter } from 'expo-router'
-import { Pressable, Text, View } from 'react-native'
+import { Pressable, View } from 'react-native'
 
+import { Text } from '@/src/components'
 import tw from '@/tailwind'
 
 const Auth = () => {

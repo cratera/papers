@@ -1,12 +1,7 @@
 import { useState } from 'react'
-import {
-  ActivityIndicator,
-  Pressable,
-  Text,
-  TextInput,
-  View,
-} from 'react-native'
+import { ActivityIndicator, Pressable, TextInput, View } from 'react-native'
 
+import { Text } from '@/src/components'
 import { useSignInWithEmail } from '@/src/features/auth/hooks'
 import tw from '@/tailwind'
 
@@ -21,7 +16,7 @@ const SignIn = () => {
 
   return (
     <View style={tw`test`}>
-      <Text style={tw`text-xs`}>Email</Text>
+      <Text variant="small">Email</Text>
       <TextInput
         onChangeText={setEmail}
         placeholder="Email"
@@ -29,7 +24,9 @@ const SignIn = () => {
         editable={!isLoading}
       />
 
-      <Text style={tw`mt-3 text-xs`}>Password</Text>
+      <Text variant="small" style={tw`mt-3`}>
+        Password
+      </Text>
       <TextInput
         onChangeText={setPassword}
         placeholder="Password"
@@ -43,7 +40,7 @@ const SignIn = () => {
 
       {isLoading && <ActivityIndicator />}
 
-      {error && <Text style={tw`text-red-500`}>{error.message}</Text>}
+      {error && <Text style={tw`text-orange`}>{error.message}</Text>}
     </View>
   )
 }
