@@ -44,26 +44,30 @@ export default function RootLayout() {
 
   useRefecthOnAppFocus()
 
+  if (!fontsLoaded) {
+    return null
+  }
+
   return (
     <QueryClientProvider client={queryClient}>
       <SupabaseProvider>
         <AuthProvider>
-          <RootLayoutNav fontsLoaded={fontsLoaded} />
+          <RootLayoutNav />
         </AuthProvider>
       </SupabaseProvider>
     </QueryClientProvider>
   )
 }
 
-const RootLayoutNav = ({ fontsLoaded }: { fontsLoaded: boolean }) => {
+const RootLayoutNav = () => {
   const { isLoading: isAuthLoading } = useAuth()
 
   // Hide the splash screen when fonts and auth are loaded.
   useEffect(() => {
-    if (fontsLoaded && !isAuthLoading) {
+    if (!isAuthLoading) {
       SplashScreen.hideAsync()
     }
-  }, [fontsLoaded, isAuthLoading])
+  }, [isAuthLoading])
 
   // Ensure that the device context is available to tailwind.
   useDeviceContext(tw)
