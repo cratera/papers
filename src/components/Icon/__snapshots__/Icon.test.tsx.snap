@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon renders correctly with given props 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight="24"
+  bbWidth="24"
+  fill="none"
+  focusable={false}
+  height="24"
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    [
+      {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
+      },
+      [
+        {
+          "color": "#000",
+        },
+        undefined,
+      ],
+      {
+        "flex": 0,
+        "height": 24,
+        "width": 24,
+      },
+    ]
+  }
+  tintColor="#000"
+  vbHeight={24}
+  vbWidth={24}
+  width="24"
+>
+  <RNSVGGroup
+    fill={null}
+    propList={
+      [
+        "fill",
+      ]
+    }
+  >
+    <RNSVGPath
+      d="M16.9731 13.3333L12.2744 18.12L14.125 20L22 12L14.125 4L12.2744 5.88L16.9731 10.6667L1 10.6667L1 13.3333L16.9731 13.3333Z"
+      fill={
+        {
+          "type": 2,
+        }
+      }
+      propList={
+        [
+          "fill",
+        ]
+      }
+    />
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;

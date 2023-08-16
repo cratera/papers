@@ -5,7 +5,7 @@ import { Text, TextProps, textVariants } from './Text'
 
 import tw from '@/tailwind'
 
-const meta = {
+export default {
   component: Text,
   argTypes: {
     variant: {
@@ -15,7 +15,6 @@ const meta = {
   },
 } satisfies Meta<TextProps>
 
-export default meta
 type Story = StoryObj<TextProps>
 
 export const Default = {
@@ -24,7 +23,7 @@ export const Default = {
     variant: 'h1',
     bold: false,
   },
-} as Story
+} satisfies Story
 
 // Render all variants on top of each other.
 export const Variants = () => {
