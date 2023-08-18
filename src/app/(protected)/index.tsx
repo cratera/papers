@@ -14,7 +14,7 @@ export default function App() {
     <View style={tw`test`}>
       <Text variant="h4">{`Hi ${session?.user?.email}!`}</Text>
 
-      <Link href="/modal" style={tw`mt-4 text-purple`}>
+      <Link href="/modal" style={tw`mt-4`}>
         <Text>Open modal</Text>
       </Link>
 
@@ -22,7 +22,7 @@ export default function App() {
         style={tw`mt-4 bg-purple rounded p-2`}
         onPress={() => mutate()}
       >
-        <Text style={tw`text-white`}>Sign out</Text>
+        <Text color="white">Sign out</Text>
       </Pressable>
     </View>
   )

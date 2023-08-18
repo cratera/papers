@@ -5,6 +5,7 @@ exports[`Text renders correctly with given props 1`] = `
   style={
     [
       {
+        "color": "#000",
         "fontFamily": "Karla-Bold",
         "fontSize": 16,
         "lineHeight": 24,

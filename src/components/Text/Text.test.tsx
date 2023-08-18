@@ -14,6 +14,7 @@ describe('Text', () => {
       children: 'Welcome to Papers!',
       variant: 'body',
       bold: true,
+      color: 'black',
       style: tw`text-center`,
     }).toJSON()
 

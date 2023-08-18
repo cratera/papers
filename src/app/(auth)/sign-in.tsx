@@ -40,7 +40,7 @@ const SignIn = () => {
 
       {isLoading && <ActivityIndicator />}
 
-      {error && <Text style={tw`text-orange`}>{error.message}</Text>}
+      {error && <Text>{error.message}</Text>}
     </View>
   )
 }

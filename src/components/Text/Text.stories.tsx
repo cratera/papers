@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react-native'
 import { FlatList, View } from 'react-native'
 
 import { Text, TextProps } from './Text'
-import { textVariants } from './Text.data'
+import { TEXT_COLORS, TEXT_VARIANTS } from './Text.constants'
 
 import tw from '@/tailwind'
 
@@ -11,7 +11,11 @@ export default {
   argTypes: {
     variant: {
       control: { type: 'select' },
-      options: textVariants,
+      options: TEXT_VARIANTS,
+    },
+    color: {
+      control: { type: 'select' },
+      options: TEXT_COLORS,
     },
   },
 } satisfies Meta<TextProps>
@@ -23,6 +27,7 @@ export const Default = {
     children: 'Welcome to Papers!',
     variant: 'h1',
     bold: false,
+    color: 'black',
   },
 } satisfies Story
 
@@ -30,7 +35,7 @@ export const Default = {
 export const Variants = () => {
   return (
     <FlatList
-      data={textVariants}
+      data={TEXT_VARIANTS}
       keyExtractor={(variant) => variant}
       renderItem={(variant) => {
         return <Text variant={variant.item}>{variant.item}</Text>

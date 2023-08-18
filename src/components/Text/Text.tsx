@@ -1,6 +1,6 @@
 import { Text as RNText, TextProps as RNTextProps } from 'react-native'
 
-import { textVariants } from './Text.data'
+import { TEXT_COLORS, TEXT_VARIANTS } from './Text.constants'
 
 import tw from '@/tailwind'
 
@@ -8,17 +8,22 @@ export interface TextProps extends RNTextProps {
   /**
    * @default 'body'
    */
-  variant?: (typeof textVariants)[number]
+  variant?: (typeof TEXT_VARIANTS)[number]
   /**
    * Whether the text should be bold. Only applies to `display`, `body` and `small` variants.
    * @default false
    */
   bold?: boolean
+  /**
+   * @default 'black'
+   */
+  color?: (typeof TEXT_COLORS)[number]
 }
 
 export const Text = ({
   variant = 'body',
   bold,
+  color = 'black',
   style,
   ...props
 }: TextProps) => {
@@ -33,13 +38,9 @@ export const Text = ({
             ? `font-sans-bold`
             : `font-sans`,
           // Font size.
-          variant === 'h1' && `text-h1`,
-          variant === 'h2' && `text-h2`,
-          variant === 'h3' && `text-h3`,
-          variant === 'h4' && `text-h4`,
-          variant === 'display' && `text-display`,
-          variant === 'body' && `text-body`,
-          variant === 'small' && `text-small`
+          `text-${variant}`,
+          // Font color.
+          `text-${color}`
         ),
         style,
       ]}
