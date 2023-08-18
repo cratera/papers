@@ -10,6 +10,7 @@ describe('Icon', () => {
   it('renders correctly with given props', async () => {
     const component = setup({
       name: 'ArrowRight',
+      color: 'black',
     }).toJSON()
 
     expect(component).toMatchSnapshot()
