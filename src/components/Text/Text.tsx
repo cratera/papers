@@ -1,16 +1,8 @@
 import { Text as RNText, TextProps as RNTextProps } from 'react-native'
 
-import tw from '@/tailwind'
+import { textVariants } from './Text.data'
 
-export const textVariants = [
-  'h1',
-  'h2',
-  'h3',
-  'h4',
-  'display',
-  'body',
-  'small',
-] as const
+import tw from '@/tailwind'
 
 export interface TextProps extends RNTextProps {
   /**

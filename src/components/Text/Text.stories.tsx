@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react-native'
 import { FlatList, View } from 'react-native'
 
-import { Text, TextProps, textVariants } from './Text'
+import { Text, TextProps } from './Text'
+import { textVariants } from './Text.data'
 
 import tw from '@/tailwind'
 
