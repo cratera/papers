@@ -52,7 +52,11 @@ module.exports = {
       body: ['1rem', { lineHeight: '1.5rem' }],
       small: ['0.75rem', { lineHeight: '1rem' }],
     },
-    extend: {},
+    extend: {
+      rotate: {
+        270: '270deg',
+      },
+    },
   },
   plugins: [
     plugin(function ({ addUtilities }) {

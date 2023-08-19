@@ -21,6 +21,13 @@ exports[`Icon renders correctly with given props 1`] = `
         {
           "color": "#000",
         },
+        {
+          "transform": [
+            {
+              "rotate": "0deg",
+            },
+          ],
+        },
         undefined,
       ],
       {

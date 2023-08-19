@@ -11,6 +11,7 @@ describe('Icon', () => {
     const component = setup({
       name: 'ArrowRight',
       color: 'black',
+      rotate: '0',
     }).toJSON()
 
     expect(component).toMatchSnapshot()

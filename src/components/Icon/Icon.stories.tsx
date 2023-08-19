@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react-native'
 import { FlatList, View } from 'react-native'
 
 import { Icon, IconProps } from './Icon'
-import { ICON_COLORS } from './Icon.constants'
+import { ICON_COLORS, ICON_ROTATIONS } from './Icon.constants'
 import * as IconSet from './IconSet'
 import { Text } from '../Text'
 
@@ -21,6 +21,10 @@ export default {
       control: { type: 'select' },
       options: ICON_COLORS,
     },
+    rotate: {
+      control: { type: 'select' },
+      options: ICON_ROTATIONS,
+    },
   },
 } satisfies Meta<IconProps>
 
@@ -30,6 +34,7 @@ export const Default = {
   args: {
     name: 'ArrowRight',
     color: 'black',
+    rotate: '0',
   },
 } satisfies Story
 
