@@ -9,7 +9,12 @@ const setup = (props: ButtonProps) => {
 describe('Button', () => {
   it('renders correctly with given props', async () => {
     const component = setup({
-      label: 'Button',
+      label: 'Back',
+      icon: 'ChevronRight',
+      iconPosition: 'left',
+      iconRotation: '180',
+      color: 'black',
+      outlined: false,
     }).toJSON()
 
     expect(component).toMatchSnapshot()
